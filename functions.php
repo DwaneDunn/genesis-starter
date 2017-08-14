@@ -1,6 +1,6 @@
 <?php
 /**
- * Description
+ * Genesis Starter theme functions file.
  *
  * @package     KnowITMedia\GenesisStarter
  * @since       1.0.0
