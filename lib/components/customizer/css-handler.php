@@ -1,6 +1,6 @@
 <?php
 /**
- * Adds the required CSS to the front end to the Genesis Sample Theme.
+ * Adds the required CSS to the front end to the Genesis Starter Theme.
  *
  * @package     KnowITMedia\GenesisStarter\Customizer
  * @since       1.0.0
@@ -11,14 +11,15 @@
 
 namespace KnowITMedia\GenesisStarter\Customizer;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\build_theme_css' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\build_inline_css_from_customizer_settings' );
 /**
 * Checks the settings for the link color, and accent color.
 * If any of these value are set the appropriate CSS is output.
 *
 * @since 1.0.0
 */
-function build_theme_css() {
+function build_inline_css_from_customizer_settings() {
+	$prefix = get_settings_prefix();
 
 	$handle  = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
 
