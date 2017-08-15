@@ -15,7 +15,7 @@ namespace KnowITMedia\GenesisStarter;
 include_once( 'lib/init.php' );
 
 // Start the Genesis framework engine.
-include_once( get_template_directory() . '/lib/init.php' );
+//include_once( get_template_directory() . '/lib/init.php' );
 
 // Load the child theme autoload
 include_once( 'lib/functions/autoload.php' );
