@@ -24,9 +24,26 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\localization_setup' );
  */
 function setup_child_theme() {
 
+	unregister_genesis_callbacks();
+
 	adds_theme_supports();
 	adds_new_image_sizes();
 
+}
+
+/**
+ * Unregister Genesis callbacks.  We do this here because the child theme loads before Genesis.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function unregister_genesis_callbacks() {
+	unregister_menu_callbacks();
+
+	//unregister_header_callbacks();
+	//unregister_footer_callbacks();
+	//add each of the unregister structure callbacks here
 }
 
 /**
@@ -64,13 +81,11 @@ function adds_theme_supports() {
 			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
 			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )
 		),
-
 	);
 
 	foreach( $config as $feature => $args ) {
 		add_theme_support( $feature, $args );
 	}
-
 }
 
 /**
@@ -107,8 +122,6 @@ function localization_setup() {
 	load_child_theme_textdomain( CHILD_TEXT_DOMAIN, CHILD_THEME_DIR . '/languages' );
 }
 
-
-
 add_filter( 'genesis_theme_settings_defaults', __NAMESPACE__ . '\set_theme_settings_defaults' );
 /**
  * Set theme settings default
@@ -125,8 +138,6 @@ function set_theme_settings_defaults( array $defaults ) {
 
 	return $defaults;
 }
-
-
 
 add_action( 'after_switch_theme', __NAMESPACE__ . '\update_theme_setting_defaults' );
 /**
