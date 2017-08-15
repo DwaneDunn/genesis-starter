@@ -11,7 +11,7 @@
 
 namespace KnowITMedia\GenesisStarter\Customizer;
 /**
- * Set theme prefix
+ * Get settings prefix
  *
  * @since 1.0.0
  *
