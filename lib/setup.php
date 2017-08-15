@@ -146,7 +146,7 @@ function set_theme_settings_defaults( array $defaults ) {
 	return $defaults;
 }
 
-add_action( 'after_switch_theme', __NAMESPACE__ . '\update_theme_setting_defaults' );
+add_action( 'after_switch_theme', __NAMESPACE__ . '\update_theme_settings_defaults' );
 /**
  * Sets the theme setting defaults
  *
