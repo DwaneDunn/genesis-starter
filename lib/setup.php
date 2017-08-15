@@ -1,9 +1,9 @@
 <?php
 /**
- * Set up theme
+ * Set up child theme
  *
  * @package     KnowITMedia\GenesisStarter
- * @since       1.0.0
+ * @since       1.0.1
  * @author      Dwane Dunn
  * @link        https://dwanedunn.com
  * @license     GNU General Public License 2.0+
@@ -18,7 +18,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\localization_setup' );
 /**
  * Setup child theme
  *
- * @since 1.0.0
+ * @since 1.0.1
  *
  * @return void
  */
@@ -49,7 +49,7 @@ function unregister_genesis_callbacks() {
 /**
  * Adds theme supports to the site
  *
- * @since
+ * @since 1.0.1
  *
  * @return void
  */
@@ -57,8 +57,14 @@ function adds_theme_supports() {
 
 	$config = array(
 
-		'html5' => array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ),
-		'genesis-accessibility' => array(
+		'html5'                         => array(
+			'caption',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'search-form'
+		),
+		'genesis-accessibility'         => array(
 			'404-page',
 			'drop-down-menu',
 			'headings',
@@ -66,18 +72,18 @@ function adds_theme_supports() {
 			'search-form',
 			'skip-links'
 		),
-		'genesis-responsive-viewport' => null,
-		'custom-header' => array(
+		'genesis-responsive-viewport'   => null,
+		'custom-header'                 => array(
 			'width'           => 600,
 			'height'          => 160,
 			'header-selector' => '.site-title a',
 			'header-text'     => false,
 			'flex-height'     => true,
 		),
-		'custom-background' => null,
+		'custom-background'               => null,
 		'genesis-after-entry-widget-area' => null,
-		'genesis-footer-widgets' => 3,
-		'genesis-menus' => array(
+		'genesis-footer-widgets'             => 3,
+		'genesis-menus'                   => array(
 			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
 			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )
 		),
@@ -98,9 +104,9 @@ function adds_theme_supports() {
 function adds_new_image_sizes() {
 	$config = array(
 		'featured-image' => array(
-			'width' => 720,
-			'height' => 400,
-			'crop' => true,
+			'width'      => 720,
+			'height'     => 400,
+			'crop'       => true,
 		),
 	);
 
@@ -126,7 +132,7 @@ add_filter( 'genesis_theme_settings_defaults', __NAMESPACE__ . '\set_theme_setti
 /**
  * Set theme settings default
  *
- * @since 1.0.0
+ * @since 1.0.1
  *
  * @return array $defaults
  *
@@ -134,6 +140,7 @@ add_filter( 'genesis_theme_settings_defaults', __NAMESPACE__ . '\set_theme_setti
 function set_theme_settings_defaults( array $defaults ) {
 
 	$config = get_theme_settings_defaults();
+
 	$defaults = wp_parse_args( $config, $defaults );
 
 	return $defaults;
@@ -153,9 +160,7 @@ function update_theme_settings_defaults() {
 	$config = get_theme_settings_defaults();
 
 	if ( function_exists( 'genesis_update_settings' ) ) {
-
 		genesis_update_settings( $config );
-
 	}
 
 	update_option( 'posts_per_page', $config['blog_cat_num'] );
@@ -178,5 +183,4 @@ function get_theme_settings_defaults() {
 		'posts_nav'                 => 'numeric',
 		'site_layout'               => 'content-sidebar',
 	);
-
 }
