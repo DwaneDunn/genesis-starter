@@ -5,6 +5,15 @@
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
   width: 1060px;
+
+  @media only screen and (max-width: 1340px) {
+    width: 920px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 740px;
+  }
+
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap {

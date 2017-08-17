@@ -1,0 +1,13 @@
+
+/* ## Site Header Navigation
+--------------------------------------------- */
+
+.site-header .genesis-nav-menu li li {
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .site-header ul.genesis-nav-menu {
+    float: none;
+  }
+}

@@ -1,0 +1,37 @@
+
+.sidebar {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: 860px) {
+    margin-bottom: 5%;
+  }
+
+}
+
+.sidebar .widget {
+  background-color: #fff;
+  padding: 40px;
+
+  @media only screen and (max-width: 860px) {
+    padding: 30px;
+    margin-bottom: 5%;
+  }
+
+}
+
+@media only screen and (max-width: 1340px) {
+
+  .sidebar-primary {
+    width: 300px;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) {
+  .sidebar-primary,
+  .sidebar-secondary {
+    width: 100%;
+  }
+}
