@@ -1,0 +1,24 @@
+{
+  "name": "genesis-starter",
+  "version": "1.0.0",
+  "description": "Genesis starter theme for code projects.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DwaneDunn/genesis-starter.git"
+  },
+  "author": "Dwane Dunn",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/DwaneDunn/genesis-starter/issues"
+  },
+  "homepage": "https://github.com/DwaneDunn/genesis-starter#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^2.0.0-beta.0"
+  }
+}
