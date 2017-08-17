@@ -1,0 +1,21 @@
+//
+// Title Area - Site Title
+// ==============================================
+
+.site-title {
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media only screen and (max-width: 1023px) {
+    text-align: center;
+  }
+}
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+  color: #333;
+  text-decoration: none;
+}

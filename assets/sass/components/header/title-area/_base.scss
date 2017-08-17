@@ -1,0 +1,29 @@
+//
+// Title Area Base Styles
+// ==============================================
+
+.title-area {
+  float: left;
+  padding: 10px 0;
+  width: 300px;
+
+  @media only screen and (max-width: 1023px) {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .site-header .title-area {
+    text-align: center;
+  }
+}
+
+.header-full-width .title-area {
+  float: none;
+  width: 100%;
+}
+
+
+
+
+
