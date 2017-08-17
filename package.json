@@ -16,9 +16,11 @@
   },
   "homepage": "https://github.com/DwaneDunn/genesis-starter#readme",
   "devDependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
-    "node-bourbon": "^4.2.8",
-    "node-neat": "^2.0.0-beta.0"
-  }
+    "sass-rem": "^2.0.0"
+  },
+  "dependencies": {}
 }
