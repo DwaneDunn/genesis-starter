@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     // utilities
     rename = require('gulp-rename');
 
-gulp.task('styles', function(){
+gulp.task('postcss', function(){
 
    return gulp.src('assets/sass/style.scss')
 
@@ -42,7 +42,7 @@ gulp.task('styles', function(){
 
 }); // End of styles task
 
-gulp.task('cssMinify', ['styles'], function () {
+gulp.task('cssMinify', ['postcss'], function () {
 
     return gulp.src('style.css')
         .pipe( cssnano({
@@ -60,3 +60,11 @@ gulp.task('watch', function() {
    gulp.watch('assets/sass/**/*.scss', ['styles']);
 
 });
+
+/**
+ * Individual Tasks
+ */
+
+// gulp.task( 'scripts', [''] )
+
+gulp.task( 'styles', ['cssMinify'] );
