@@ -18,28 +18,22 @@
 	Text Domain: genesis-starter
 */
 
-@import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
-@import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
-@import "../../node_modules/sass-rem/rem";
-//@import "~sass-rem/rem";
-//@import "~bourbon-neat";
-//@import "~bourbon";
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+@import '../../node_modules/sass-rem/rem';
 
+@import 'utilities/index';
 
-@import "utilities/index";
-
-@import "base/index";
-@import "layouts/index";
-@import "common-classes/index";
-@import "components/widgets/index";
-@import "plugins/index";
-@import "components/accessibility/index";
-
-@import "components/header/index";
-
-@import "components/navigation/index";
-@import "components/content/index";
-@import "components/comments/index";
-@import "components/sidebars/index";
-@import "components/footer/index";
+@import 'base/index';
+@import 'layouts/index';
+@import 'common-classes/index';
+@import 'components/widgets/index';
+@import 'plugins/index';
+@import 'components/accessibility/index';
+@import 'components/header/index';
+@import 'components/navigation/index';
+@import 'components/content/index';
+@import 'components/comments/index';
+@import 'components/sidebars/index';
+@import 'components/footer/index';
 
